@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STARTSTATIC | Download Seguro</title>
+    <title>STARTSTATIC | Otimização e Downloads</title>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2866002449649160" crossorigin="anonymous"></script>
     
@@ -25,56 +25,60 @@
         .logo-principal { width: 150px; height: 150px; margin: 0 auto 10px auto; display: block; border-radius: 20px; object-fit: cover; border: 1px solid rgba(0, 255, 136, 0.3); box-shadow: 0 0 15px rgba(0, 255, 136, 0.4); }
         
         .article-container { width: 100%; max-width: 800px; background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 25px; margin-bottom: 30px; line-height: 1.6; }
-        .article-container h1, .article-container h2 { color: #fff; margin-top: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px; }
-        .article-container p { font-size: 0.95rem; color: #d1d5db; margin-bottom: 15px; }
+        .article-container h1 { color: var(--primary); font-size: 1.5rem; margin-top: 0; border-bottom: 1px solid rgba(0, 255, 136, 0.3); padding-bottom: 10px; }
+        .article-container h2 { color: #fff; font-size: 1.2rem; margin-top: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px; }
+        
+        /* ESTILO DOS BLOCOS DE TEXTO COM MINI FOTOS */
+        .content-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .content-block img {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            flex-shrink: 0; /* Impede a imagem de amassar */
+        }
+
+        .content-block p {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Ajuste para telas menores (Celulares) */
+        @media (max-width: 480px) {
+            .content-block {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .content-block p {
+                text-align: justify;
+            }
+            .content-block img {
+                width: 100%;
+                max-height: 150px;
+                margin-bottom: 10px;
+            }
+        }
         
         .ad-space { width: 100%; min-height: 250px; background: rgba(0, 0, 0, 0.4); border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.3); font-size: 0.8rem; margin: 30px 0; text-transform: uppercase; }
         
-        /* O NOVO BOTÃO COM EFEITO DE LUZ ROXA */
-        .btn-magic {
-            position: relative;
-            overflow: hidden; /* Mantém a luz presa dentro do botão */
-            background: #0f172a; /* Azul muito escuro */
-            border: 1px solid rgba(168, 85, 247, 0.6); /* Borda roxa */
-            color: #fff;
-            padding: 18px 20px;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 280px; /* Mais curto que o antigo */
-            margin: 20px auto;
-            text-transform: uppercase;
-            text-decoration: none;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: 0.3s;
-        }
-
-        /* O Feixe de luz passando */
-        .btn-magic::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%; /* Começa fora pela esquerda */
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.8), transparent);
-            transform: skewX(-20deg); /* Inclinação do raio */
-            animation: feixeLuz 2.5s infinite; /* Tempo que a luz demora para passar */
-        }
-
-        @keyframes feixeLuz {
-            0% { left: -100%; }
-            100% { left: 200%; } /* Termina fora pela direita */
-        }
-
+        /* BOTÃO MAGIC E PASSOS */
+        .btn-magic { position: relative; overflow: hidden; background: #0f172a; border: 1px solid rgba(168, 85, 247, 0.6); color: #fff; padding: 18px 20px; border-radius: 12px; font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; margin: 20px auto; text-transform: uppercase; text-decoration: none; cursor: pointer; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); transition: 0.3s; }
+        .btn-magic::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.8), transparent); transform: skewX(-20deg); animation: feixeLuz 2.5s infinite; }
+        @keyframes feixeLuz { 0% { left: -100%; } 100% { left: 200%; } }
         .btn-magic:active { transform: scale(0.95); }
 
-        /* Contêineres de Passo */
         .passo-area { text-align: center; margin: 30px 0; padding: 20px; border-radius: 15px; background: rgba(0,0,0,0.2); }
         .timer-text { font-size: 1.2rem; color: #fff; font-weight: bold; margin-bottom: 10px; }
         .timer-text span { color: var(--primary); font-size: 1.5rem; }
@@ -89,55 +93,66 @@
     </header>
 
     <main class="article-container">
-        <h1>Baixar e Instalar: Guia Completo</h1>
-        <p>A nova versão trazida recentemente pela comunidade levantou muitas dúvidas entre os usuários. Com melhorias significativas na interface e otimização de bateria, o aplicativo promete entregar uma experiência muito mais fluida.</p>
+        <h1>Guia Definitivo: Como Otimizar a Bateria do seu Android em 2026</h1>
+        
+        <div class="content-block">
+            <img src="img/bateria.jpg" alt="Otimização de Bateria" onerror="this.style.display='none'">
+            <p>O desempenho dos dispositivos móveis tornou-se uma das maiores preocupações para os usuários avançados. Com aplicativos exigindo cada vez mais processamento, saber gerenciar o consumo de energia em segundo plano é essencial. Desativar animações desnecessárias e utilizar o modo escuro são apenas os primeiros passos para garantir que seu aparelho chegue ao fim do dia com carga.</p>
+        </div>
         
         <div id="areaPasso1" class="passo-area">
             <div id="displayTimerTop" style="display: none;">
-                <p class="timer-text">Preparando links... <br><span>10</span>s</p>
+                <p class="timer-text">Autenticando acesso... <br><span>10</span>s</p>
             </div>
-            <button id="btnIniciar" class="btn-magic">INICIAR DOWNLOAD</button>
+            <button id="btnIniciar" class="btn-magic">ACESSAR DOWNLOAD</button>
         </div>
 
         <div class="ad-space">Anúncio Google AdSense 1</div>
 
-        <h2>Principais Recursos e Novidades</h2>
-        <p>Um dos grandes destaques desta versão é o desbloqueio de funções premium que antes limitavam a experiência. Além disso, a segurança foi reforçada, garantindo que o seu dispositivo permaneça protegido enquanto você aproveita o conteúdo.</p>
-        <p>Recomendamos que, antes de realizar a instalação, você verifique o espaço disponível no seu armazenamento interno, pois o arquivo descompactado pode exigir um pouco mais de espaço do que as versões anteriores.</p>
+        <h2>Gerenciamento de Cache e Armazenamento</h2>
+        
+        <div class="content-block">
+            <img src="img/cache.jpg" alt="Limpeza de Cache" onerror="this.style.display='none'">
+            <p>Arquivos residuais e o acúmulo de cache podem deixar qualquer smartphone lento, causando travamentos inesperados. Ferramentas integradas ao sistema operacional muitas vezes não são suficientes para uma limpeza profunda. Recomenda-se realizar uma varredura manual em aplicativos de redes sociais e navegadores quinzenalmente para liberar armazenamento interno valioso.</p>
+        </div>
 
         <div class="ad-space">Anúncio Google AdSense 2</div>
 
         <div id="areaPasso2" class="passo-area" style="display: none;">
-            <p style="color: #a855f7; font-weight: bold;">Autenticação concluída!</p>
-            <button id="btnContinuar" class="btn-magic">CONTINUAR PROCESSO</button>
+            <p style="color: #a855f7; font-weight: bold;">Verificação de segurança concluída!</p>
+            <button id="btnContinuar" class="btn-magic">AVANÇAR PROCESSO</button>
         </div>
 
-        <h2>Como realizar a instalação</h2>
-        <p>O processo é simples. Após o término das etapas, você será redirecionado para a página final segura. Lembre-se de habilitar a permissão de "Fontes Desconhecidas" nas configurações do seu aparelho, caso esteja baixando direto pelo navegador.</p>
+        <h2>Segurança na Instalação de Arquivos Externos</h2>
+        <p style="color: #d1d5db; font-size: 0.95rem; margin-bottom: 20px;">Ao lidar com pacotes de instalação que não provêm de lojas oficiais, a atenção deve ser redobrada. Certifique-se de que a fonte do arquivo é confiável e mantenha a proteção nativa do sistema ativada. O Play Protect atua como uma barreira importante contra códigos maliciosos modificados que tentam acessar dados em segundo plano.</p>
 
         <div class="ad-space">Anúncio Google AdSense 3</div>
 
         <div id="areaPasso3" class="passo-area" style="display: none;">
-            <p style="color: #00ff88; font-weight: bold;">Seu arquivo está pronto!</p>
-            <a href="#" id="btnBaixar" class="btn-magic">BAIXAR ARQUIVO</a>
+            <p style="color: #00ff88; font-weight: bold;">Seu pacote está liberado!</p>
+            <a href="#" id="btnBaixar" class="btn-magic">INICIAR DOWNLOAD FINAL</a>
         </div>
 
     </main>
 
-    <footer>&copy; 2026 STARTSTATIC - BEYOND ULTRA EDITION</footer>
+    <footer>
+        <p style="margin: 0; margin-bottom: 10px;">
+            <a href="#" style="color: #00ff88; text-decoration: none;">Política de Privacidade</a> | 
+            <a href="#" style="color: #00ff88; text-decoration: none;">Termos de Uso</a>
+        </p>
+        &copy; 2026 STARTSTATIC HUB - Todos os direitos reservados.
+    </footer>
 
     <script>
-        // LÓGICA DO GERADOR (BASE64)
         const urlParams = new URLSearchParams(window.location.search);
         const destinoCodificado = urlParams.get('d');
-        let linkFinal = "https://t.me/ApkBugado"; // Fallback se o link vier vazio
+        let linkFinal = "https://t.me/ApkBugado";
 
         if (destinoCodificado) {
             try { linkFinal = atob(destinoCodificado); } 
             catch(e) { console.error("Link inválido"); }
         }
 
-        // CONTROLE DE ETAPAS
         const btnIniciar = document.getElementById('btnIniciar');
         const displayTimerTop = document.getElementById('displayTimerTop');
         const timerSpan = displayTimerTop.querySelector('span');
@@ -148,7 +163,6 @@
         const areaPasso3 = document.getElementById('areaPasso3');
         const btnBaixar = document.getElementById('btnBaixar');
 
-        // ETAPA 1: Clique Iniciar
         btnIniciar.addEventListener('click', () => {
             btnIniciar.style.display = 'none';
             displayTimerTop.style.display = 'block';
@@ -162,20 +176,17 @@
 
                 if (tempo <= 0) {
                     clearInterval(contador);
-                    displayTimerTop.style.display = 'none'; // Esconde o timer
+                    displayTimerTop.style.display = 'none';
                     
-                    // Mostra o passo 2 e rola a tela até ele
                     areaPasso2.style.display = 'block';
                     areaPasso2.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }, 1000);
         });
 
-        // ETAPA 2: Clique Continuar
         btnContinuar.addEventListener('click', () => {
             btnContinuar.style.display = 'none';
             
-            // Mostra o passo final, injeta o link e rola a tela até o fim
             areaPasso3.style.display = 'block';
             btnBaixar.href = linkFinal;
             areaPasso3.scrollIntoView({ behavior: 'smooth', block: 'center' });
