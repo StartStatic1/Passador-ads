@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTSTATIC | Download Seguro</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2866002449649160" crossorigin="anonymous"></script>
+    
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(err => console.log('Erro SW:', err));
+            });
+        }
+    </script>
+
+    <style>
+        :root { --primary: #00ff88; --primary-glow: rgba(0, 255, 136, 0.6); --bg: #050810; --card-bg: rgba(30, 41, 59, 0.5); }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--bg); background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 50%), radial-gradient(circle at 0% 100%, #0f172a 0%, transparent 50%); color: white; font-family: 'Inter', system-ui, sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; padding: 20px; min-height: 100vh; }
+        header { text-align: center; margin-bottom: 20px; width: 100%; }
+        .logo-principal { width: 100%; max-width: 250px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .article-container { width: 100%; max-width: 800px; background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 25px; margin-bottom: 30px; line-height: 1.6; }
+        .article-container h1 { color: var(--primary); font-size: 1.5rem; margin-top: 0; border-bottom: 1px solid rgba(0, 255, 136, 0.3); padding-bottom: 10px; }
+        .article-container h2 { font-size: 1.2rem; color: #fff; margin-top: 25px; }
+        .article-container p { font-size: 0.95rem; color: #d1d5db; margin-bottom: 15px; }
+        .ad-space { width: 100%; min-height: 100px; background: rgba(0, 0, 0, 0.4); border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.3); font-size: 0.8rem; margin: 20px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .download-area { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); min-height: 120px; }
+        .timer-text { font-size: 1.1rem; color: #fff; font-weight: bold; margin-bottom: 15px; }
+        .timer-text span { color: var(--primary); font-size: 1.3rem; }
+        .btn-ultra { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 400px; padding: 20px; margin: 0 auto; color: #000; text-decoration: none; border-radius: 15px; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-passo1 { background: linear-gradient(45deg, #a8ff78, #78ffd6); box-shadow: 0 5px 20px rgba(120, 255, 214, 0.4); }
+        .btn-passo2 { background: linear-gradient(45deg, #ff9a44, #fc6076); box-shadow: 0 5px 20px rgba(252, 96, 118, 0.4); }
+        .btn-final { background: linear-gradient(45deg, #00ff88, #00bd65); box-shadow: 0 10px 30px var(--primary-glow); }
+        .btn-ultra:active { transform: scale(0.95); }
+        footer { margin: 20px 0; opacity: 0.3; font-size: 0.7rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img/startstatic-logo.jpg" alt="StartStatic Logo" class="logo-principal" onerror="this.style.display='none'">
+    </header>
+
+    <main class="article-container">
+        <h1>Análise Completa: Vale a pena a nova atualização?</h1>
+        <p>A nova versão trazida recentemente pela comunidade levantou muitas dúvidas entre os usuários. Com melhorias significativas na interface e otimização de bateria, o aplicativo promete entregar uma experiência muito mais fluida e sem travamentos.</p>
+        
+        <div class="ad-space">Anúncio Google AdSense 1</div>
+
+        <h2>Principais Recursos e Novidades</h2>
+        <p>Um dos grandes destaques desta versão é o desbloqueio de funções premium que antes limitavam a experiência. Além disso, a segurança foi reforçada, garantindo que o seu dispositivo permaneça protegido enquanto você aproveita o conteúdo.</p>
+
+        <div class="ad-space">Anúncio Google AdSense 2</div>
+
+        <h2>Como realizar a instalação</h2>
+        <p>Siga os passos abaixo para liberar o seu arquivo. Lembre-se de habilitar a permissão de "Fontes Desconhecidas" nas configurações do seu aparelho antes de instalar.</p>
+
+        <div class="download-area">
+            <button id="btnPasso1" class="btn-ultra btn-passo1">🛡️ CLIQUE PARA VERIFICAR 🛡️</button>
+            <div id="areaTimer" style="display: none;">
+                <p class="timer-text">Analisando conexão... aguarde <span id="segundos">15</span>s</p>
+            </div>
+            <button id="btnPasso2" class="btn-ultra btn-passo2" style="display: none;">⚙️ GERAR LINK SEGURO ⚙️</button>
+            <a href="#" id="btnDownload" class="btn-ultra btn-final" style="display: none;" target="_blank">🔥 BAIXAR AGORA 🔥</a>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 STARTSTATIC - BEYOND ULTRA EDITION</footer>
+
+    <script>
+        // LÓGICA DE CAPTURA DO LINK NA URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const destinoCodificado = urlParams.get('d');
+        let linkFinal = "https://t.me/ApkBugado"; // Link padrão se der erro ou alguém acessar direto
+
+        if (destinoCodificado) {
+            try {
+                linkFinal = atob(destinoCodificado); // Descriptografa o Base64
+            } catch(e) {
+                console.error("Link inválido");
+            }
+        }
+
+        // LÓGICA DOS BOTÕES
+        const btnPasso1 = document.getElementById('btnPasso1');
+        const areaTimer = document.getElementById('areaTimer');
+        const displaySegundos = document.getElementById('segundos');
+        const btnPasso2 = document.getElementById('btnPasso2');
+        const btnDownload = document.getElementById('btnDownload');
+
+        let tempoRestante = 15;
+
+        btnPasso1.addEventListener('click', () => {
+            btnPasso1.style.display = 'none';
+            areaTimer.style.display = 'block';
+            
+            const contador = setInterval(() => {
+                tempoRestante--;
+                displaySegundos.textContent = tempoRestante;
+
+                if (tempoRestante <= 0) {
+                    clearInterval(contador);
+                    areaTimer.style.display = 'none';
+                    btnPasso2.style.display = 'flex';
+                }
+            }, 1000);
+        });
+
+        btnPasso2.addEventListener('click', () => {
+            btnPasso2.style.display = 'none';
+            btnDownload.href = linkFinal; // Injeta o link mágico aqui!
+            btnDownload.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
