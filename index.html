@@ -29,48 +29,17 @@
         .article-container h2 { color: #fff; font-size: 1.2rem; margin-top: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px; }
         
         /* ESTILO DOS BLOCOS DE TEXTO COM MINI FOTOS */
-        .content-block {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-top: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .content-block img {
-            width: 110px;
-            height: 110px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            flex-shrink: 0; /* Impede a imagem de amassar */
-        }
+        .content-block { display: flex; align-items: flex-start; gap: 15px; margin-top: 15px; margin-bottom: 20px; }
+        .content-block img { width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.5); flex-shrink: 0; }
+        .content-block p { font-size: 0.95rem; color: #d1d5db; margin: 0; text-align: left; }
 
-        .content-block p {
-            font-size: 0.95rem;
-            color: #d1d5db;
-            margin: 0;
-            text-align: left;
-        }
-
-        /* Ajuste para telas menores (Celulares) */
         @media (max-width: 480px) {
-            .content-block {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .content-block p {
-                text-align: justify;
-            }
-            .content-block img {
-                width: 100%;
-                max-height: 150px;
-                margin-bottom: 10px;
-            }
+            .content-block { flex-direction: column; align-items: center; text-align: center; }
+            .content-block p { text-align: justify; }
+            .content-block img { width: 100%; max-height: 150px; margin-bottom: 10px; }
         }
         
+        /* ESPAÇOS DE ANÚNCIOS PREPARADOS PARA O GOOGLE */
         .ad-space { width: 100%; min-height: 250px; background: rgba(0, 0, 0, 0.4); border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.3); font-size: 0.8rem; margin: 30px 0; text-transform: uppercase; }
         
         /* BOTÃO MAGIC E PASSOS */
@@ -107,7 +76,7 @@
             <button id="btnIniciar" class="btn-magic">ACESSAR DOWNLOAD</button>
         </div>
 
-        <div class="ad-space">Anúncio Google AdSense 1</div>
+        <div class="ad-space">Espaço para Anúncio AdSense 1</div>
 
         <h2>Gerenciamento de Cache e Armazenamento</h2>
         
@@ -116,7 +85,7 @@
             <p>Arquivos residuais e o acúmulo de cache podem deixar qualquer smartphone lento, causando travamentos inesperados. Ferramentas integradas ao sistema operacional muitas vezes não são suficientes para uma limpeza profunda. Recomenda-se realizar uma varredura manual em aplicativos de redes sociais e navegadores quinzenalmente para liberar armazenamento interno valioso.</p>
         </div>
 
-        <div class="ad-space">Anúncio Google AdSense 2</div>
+        <div class="ad-space">Espaço para Anúncio AdSense 2</div>
 
         <div id="areaPasso2" class="passo-area" style="display: none;">
             <p style="color: #a855f7; font-weight: bold;">Verificação de segurança concluída!</p>
@@ -126,7 +95,7 @@
         <h2>Segurança na Instalação de Arquivos Externos</h2>
         <p style="color: #d1d5db; font-size: 0.95rem; margin-bottom: 20px;">Ao lidar com pacotes de instalação que não provêm de lojas oficiais, a atenção deve ser redobrada. Certifique-se de que a fonte do arquivo é confiável e mantenha a proteção nativa do sistema ativada. O Play Protect atua como uma barreira importante contra códigos maliciosos modificados que tentam acessar dados em segundo plano.</p>
 
-        <div class="ad-space">Anúncio Google AdSense 3</div>
+        <div class="ad-space">Espaço para Anúncio AdSense 3</div>
 
         <div id="areaPasso3" class="passo-area" style="display: none;">
             <p style="color: #00ff88; font-weight: bold;">Seu pacote está liberado!</p>
